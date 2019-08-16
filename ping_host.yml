@@ -1,6 +1,5 @@
 ---
-- name: test ping
-  hosts: all
+- hosts: all
   tasks:
-    - name: test connection
-      ping:
+    - name: test
+      shell: echo "hello world"

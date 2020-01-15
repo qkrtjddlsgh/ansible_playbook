@@ -1,0 +1,20 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: skaffold-deployment
+spec:
+  #replicas: 3
+  selector:
+    matchLabels:
+      app: skaffold
+  template:
+    metadata:
+      name: skaffold-pod
+      labels:
+        app: skaffold
+    spec:
+      containers:
+      - name: skaffold-app
+        image: glgl2131/hello
+        ports:
+        - containerPort: 8080
